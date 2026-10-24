@@ -13,7 +13,7 @@ Crie e ative um ambiente virtual. No Windows, usando PowerShell:
 ```powershell
 python -m venv .venv
 .venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txr
+python -m pip install -r requirements.txt
 ```
 
 No Linux ou macOS:
@@ -21,10 +21,8 @@ No Linux ou macOS:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements.txr
+python -m pip install -r requirements.txt
 ```
-
-O arquivo de dependências do repositório se chama `requirements.txr`.
 
 Configure estas variáveis de ambiente antes de iniciar o aplicativo:
 
@@ -47,7 +45,7 @@ export AZURE_TRANSLATOR_ENDPOINT="endpoint-do-seu-recurso"
 streamlit run app.py
 ```
 
-Não coloque a chave no código nem a envie para o GitHub. O arquivo de configuração de dependências deste repositório não está nomeado como `.gitignore`; confira os arquivos antes de enviar qualquer alteração para garantir que credenciais não sejam incluídas.
+Não coloque a chave no código nem a envie para o GitHub. O arquivo `.gitignore` do projeto ignora arquivos `.env`, mas o aplicativo lê as configurações diretamente das variáveis de ambiente.
 
 ## O que ainda falta
 
