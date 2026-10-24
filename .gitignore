@@ -1,0 +1,4 @@
+# Arquivos que não devem ir para o GitHub
+.env
+__pycache__/
+*.pyc
